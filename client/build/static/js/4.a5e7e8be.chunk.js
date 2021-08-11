@@ -1,0 +1,2 @@
+(this.webpackJsonpmarques=this.webpackJsonpmarques||[]).push([[4],{124:function(s,t,c){"use strict";c.r(t),t.default=c.p+"static/media/common-misconceptions-about-payment.e5b2c5dc.md"}}]);
+//# sourceMappingURL=4.a5e7e8be.chunk.js.map
