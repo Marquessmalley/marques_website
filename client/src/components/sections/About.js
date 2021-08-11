@@ -5,28 +5,29 @@ import Pagetitle from "../elements/Pagetitle";
 import Skill from "../elements/Skill";
 
 const aboutContent = {
-  name: "Bolby",
+  name: "Marques Smallley",
   avatarImage: "/images/avatar-2.svg",
   content:
-    "I am Bolby Doe, web developer from London, United Kingdom. I have rich experience in web site design and building and customization, also I am good at WordPress.",
+    "I am streetcoder MJ,An up and coming Freelance Full Stack Developer.I enjoy working with clients bringing ideas to life.",
 };
 
 const progressData = [
   {
     id: 1,
-    title: "Development",
+    title: "Web Development",
     percantage: 85,
     progressColor: "#FFD15C",
   },
   {
     id: 2,
-    title: "UI/UX Design",
+    title: "Mobile Development",
     percantage: 95,
     progressColor: "#FF4C60",
   },
   {
     id: 3,
-    title: "Photography",
+    title:
+      "Computer Languages: HTML5, CSS3,JS, Reactjs,React-Native Nodejs, MySQL, MongoDB",
     percantage: 70,
     progressColor: "#6C6CE5",
   },
@@ -36,27 +37,27 @@ const counterData = [
   {
     id: 1,
     title: "Projects completed",
-    count: 198,
+    count: 2,
     icon: "icon-fire",
   },
   {
     id: 2,
     title: "Cup of coffee",
-    count: 5670,
+    count: 10,
     icon: "icon-cup",
   },
   {
     id: 3,
     title: "Satisfied clients",
-    count: 427,
+    count: 2,
     icon: "icon-people",
   },
-  {
-    id: 4,
-    title: "Nominees winner",
-    count: 35,
-    icon: "icon-badge",
-  },
+  // {
+  //   id: 4,
+  //   title: "Degrees",
+  //   count: 35,
+  //   icon: "icon-badge",
+  // },
 ];
 
 function About() {

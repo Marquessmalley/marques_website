@@ -15,12 +15,14 @@ function Contact() {
   const [message, setMessage] = useState("");
 
   const submitHandler = (event) => {
+    event.preventDefault();
     const payLoad = {
       name: formdata.name,
       email: formdata.email,
       subject: formdata.subject,
       message: formdata.message,
     };
+
     axios
       .post("http://localhost:3001/api/save", payLoad)
       .then(() => {
@@ -30,7 +32,7 @@ function Contact() {
         console.log("error");
       });
 
-    event.preventDefault();
+    // // Error Checking
     if (!formdata.name) {
       setError(true);
       setMessage("Name is required");
@@ -65,6 +67,7 @@ function Contact() {
       return null;
     }
   };
+  console.log("State:", formdata);
 
   return (
     <section id="contact">

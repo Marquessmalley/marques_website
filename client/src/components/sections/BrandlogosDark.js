@@ -3,11 +3,11 @@ import React from "react";
 const brandlogoData = [
   {
     id: 1,
-    image: "images/client-1-light.svg",
+    image: "images/react-logo.png",
   },
   {
     id: 2,
-    image: "images/client-2-light.svg",
+    image: "images/git-logo.png",
   },
   {
     id: 3,
@@ -19,7 +19,7 @@ const brandlogoData = [
   },
   {
     id: 5,
-    image: "images/client-5-light.svg",
+    image: "images/github-logo.png",
   },
   {
     id: 6,
@@ -27,7 +27,7 @@ const brandlogoData = [
   },
   {
     id: 7,
-    image: "images/client-7-light.svg",
+    image: "images/nodejs-logo.png",
   },
   {
     id: 8,

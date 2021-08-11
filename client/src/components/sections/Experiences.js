@@ -5,48 +5,47 @@ import Timeline from "../elements/Timeline";
 const educationData = [
   {
     id: 1,
-    title: "Acamedic Degree",
+    title: "Self Taught Programmer",
     years: "2019 - Present",
     content:
-      "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+      "Since graduating college and with the pandemic coming down hard, I've been able to teach myself multiple languages and been able to build projects",
   },
   {
     id: 2,
-    title: "Bachelor’s Degree",
-    years: "2017 - 2013",
+    title: "Bachelor’s Of Buisness Degree",
+    years: "2016 - 2020",
     content:
-      "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+      "Attened Western Michigan University on Full-Ride Academic Scholarship and Graduated from the college of business in Dec.2020 ",
   },
   {
     id: 3,
     title: "Honours Degree",
-    years: "2013 - 2009",
-    content:
-      "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+    years: "2012 - 2016",
+    content: "Graduated top 10 students in highschool with honors.",
   },
 ];
 
 const experienceData = [
+  // {
+  //   id: 1,
+  //   title: "Web Designer",
+  //   years: "2019 - Present",
+  //   content:
+  //     "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+  // },
   {
     id: 1,
-    title: "Web Designer",
-    years: "2019 - Present",
+    title: "Front-End Developer",
+    years: "2020 - 2021",
     content:
-      "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+      "In-depth knowledge of coding the user-facing aspects of a website ",
   },
   {
     id: 2,
-    title: "Front-End Developer",
-    years: "2017 - 2013",
-    content:
-      "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
-  },
-  {
-    id: 3,
     title: "Back-End Developer",
-    years: "2013 - 2009",
+    years: "2020 - 2021",
     content:
-      "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+      "In-depth knowledge of at least one backend programming language and framework. ",
   },
 ];
 

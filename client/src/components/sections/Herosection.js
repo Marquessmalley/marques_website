@@ -24,16 +24,16 @@ function Herosection(props) {
     >
       <div className="container">
         <div className="intro">
-          <img src="images/avatar-1.svg" alt="Bolby" className="mb-4" />
+          <img src="images/avatar-1.svg" alt="Marques" className="mb-4" />
 
-          <h1 className="mb-2 mt-0">Bolby Doe</h1>
+          <h1 className="mb-2 mt-0">Marques Smalley</h1>
           <p>
             I'm a{" "}
             <Typed
               strings={[
-                "UI/UX designer ",
-                "Front-End developer",
-                "Photography lover",
+                "Front-end Developer ",
+                "Web Developer",
+                "Mobile Developer",
               ]}
               typeSpeed={80}
               backSpeed={40}
@@ -57,19 +57,19 @@ function Herosection(props) {
             </li>
             <li className="list-inline-item">
               <a href="!#">
-                <i className="fab fa-behance"></i>
+                <i className="fab fa-github"></i>
               </a>
             </li>
-            <li className="list-inline-item">
+            {/* <li className="list-inline-item">
               <a href="!#">
                 <i className="fab fa-dribbble"></i>
               </a>
-            </li>
-            <li className="list-inline-item">
+            </li> */}
+            {/* <li className="list-inline-item">
               <a href="!#">
                 <i className="fab fa-pinterest-p"></i>
               </a>
-            </li>
+            </li> */}
           </ul>
 
           <div className="mt-4">
@@ -80,7 +80,7 @@ function Herosection(props) {
               smooth={true}
               duration={500}
             >
-              Hire me
+              Contact me
             </Link>
           </div>
         </div>

@@ -18,10 +18,10 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
-          <Homepage />
+          <HomepageDark />
         </Route>
         <Route path="/dark" exact>
-          <HomepageDark />
+          <Homepage />
         </Route>
         <Route path="/light" exact>
           <HomepageLight />

@@ -5,15 +5,16 @@ function Logo({ logoSource, bootstrapNav }) {
   if (bootstrapNav) {
     return (
       <Link className="navbar-brand" to="/">
-        <img src={logoSource} alt="Bolby" />
+        <img src={logoSource} alt="Marques" />
       </Link>
     );
   }
 
   return (
     <div className="site-logo">
-      <Link to="/">
-        <img src={logoSource} alt="Bolby" />
+      <Link to="/" className="logo-link">
+        {/* <img src={logoSource} alt="Marques" /> */}
+        <h1 className="header-logo">DEV MJ</h1>
       </Link>
     </div>
   );

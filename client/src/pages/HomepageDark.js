@@ -53,18 +53,18 @@ function HomepageDark() {
         <Element name="section-works">
           <Works />
         </Element>
-        <Element name="section-pricing">
+        {/* <Element name="section-pricing">
           <Pricing />
-        </Element>
+        </Element> */}
         <Element name="section-testimoninal">
           <Testimonials />
         </Element>
         <Element name="section-brandlogos">
           <BrandlogosDark />
         </Element>
-        <Element name="section-blogs">
+        {/* <Element name="section-blogs">
           <Blogs />
-        </Element>
+        </Element> */}
         <Element name="section-contact">
           <Contact />
         </Element>
