@@ -56,13 +56,13 @@ function Contact() {
       method: "post",
       url: "http://localhost:8080/api/save",
       data: payLoad,
-    });
-    // .then(function (response) {
-    //   console.log(response);
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
+    })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
 
     // // Error Checking
     if (!formdata.name) {
