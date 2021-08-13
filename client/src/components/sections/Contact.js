@@ -14,6 +14,13 @@ function Contact() {
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
 
+  const handleChange = (event) => {
+    setFormdata({
+      ...formdata,
+      [event.currentTarget.name]: event.currentTarget.value,
+    });
+  };
+
   const submitHandler = (event) => {
     event.preventDefault();
     const payLoad = {
@@ -22,15 +29,40 @@ function Contact() {
       subject: formdata.subject,
       message: formdata.message,
     };
+    // POST IN TERMINAL
+    // axios({
+    // method: "post",
+    //   url: "/api/save",
+    //   data: payLoad,
+    // })
+    //   .then(() => {
+    //     console.log("Data successfully sent");
+    //   })
+    //   .catch(() => {
+    //     console.log("Has been a error");
+    //   });
 
-    axios
-      .post("http://localhost:3001/api/save", payLoad)
-      .then(() => {
-        console.log("Data sent");
-      })
-      .catch(() => {
-        console.log("error");
-      });
+    // POST IN BROWERS
+    // axios.post("/api/save", payLoad).then(
+    //   (response) => {
+    //     console.log(response);
+    //   },
+    //   (error) => {
+    //     console.log("has been a error", error);
+    //   }
+    // );
+
+    axios({
+      method: "post",
+      url: "http://localhost:8080/api/save",
+      data: payLoad,
+    });
+    // .then(function (response) {
+    //   console.log(response);
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
 
     // // Error Checking
     if (!formdata.name) {
@@ -49,13 +81,6 @@ function Contact() {
       setError(false);
       setMessage("You message has been sent!!!");
     }
-  };
-
-  const handleChange = (event) => {
-    setFormdata({
-      ...formdata,
-      [event.currentTarget.name]: event.currentTarget.value,
-    });
   };
 
   const handleAlerts = () => {
@@ -102,6 +127,7 @@ function Contact() {
               id="contact-form"
               className="contact-form mt-6"
               onSubmit={submitHandler}
+              action="post"
             >
               <div className="row">
                 <div className="column col-md-6">

@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
       console.error(error);
     });
 });
+
 router.post("/save", (req, res) => {
   const data = {
     name: req.body.name,
@@ -18,6 +19,8 @@ router.post("/save", (req, res) => {
     subject: req.body.subject,
     message: req.body.message,
   };
+
+  console.log(data);
 
   const newContact = new Contact();
 
