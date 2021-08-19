@@ -21,7 +21,7 @@ function Contact() {
     });
   };
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
     const payLoad = {
       name: formdata.name,
@@ -31,7 +31,7 @@ function Contact() {
     };
     // POST IN TERMINAL
     // axios({
-    // method: "post",
+    //   method: "post",
     //   url: "/api/save",
     //   data: payLoad,
     // })
@@ -41,8 +41,19 @@ function Contact() {
     //   .catch(() => {
     //     console.log("Has been a error");
     //   });
+    try {
+      const res = await fetch("/api/save", {
+        method: "POST",
+        body: JSON.stringify(payLoad),
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await res.json();
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
 
-    // POST IN BROWERS
+    // // POST IN BROWERS
     // axios.post("/api/save", payLoad).then(
     //   (response) => {
     //     console.log(response);
@@ -52,17 +63,17 @@ function Contact() {
     //   }
     // );
 
-    axios({
-      method: "post",
-      url: "http://localhost:8080/api/save",
-      data: payLoad,
-    })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    // axios({
+    //   method: "post",
+    //   url: "http://localhost:8080/api/save",
+    //   data: payLoad,
+    // })
+    //   .then(function (response) {
+    //     console.log(response);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
 
     // // Error Checking
     if (!formdata.name) {
