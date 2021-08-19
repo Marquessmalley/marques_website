@@ -21,14 +21,14 @@ const progressData = [
   {
     id: 2,
     title: "Mobile Development",
-    percantage: 95,
+    percantage: 70,
     progressColor: "#FF4C60",
   },
   {
     id: 3,
     title:
       "Computer Languages: HTML5, CSS3,JS, Reactjs,React-Native Nodejs, MySQL, MongoDB",
-    percantage: 70,
+    percantage: 90,
     progressColor: "#6C6CE5",
   },
 ];

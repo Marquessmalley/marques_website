@@ -44,21 +44,6 @@ function Services() {
             </div>
           ))}
         </div>
-        <div className="mt-5 text-center">
-          <p className="mb-0">
-            Looking for a custom job?{" "}
-            <Link
-              className="colorpink pointer"
-              to="section-contact"
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              Click here
-            </Link>{" "}
-            to contact me! 👋
-          </p>
-        </div>
       </div>
     </section>
   );
