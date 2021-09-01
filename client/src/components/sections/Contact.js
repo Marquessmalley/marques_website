@@ -23,6 +23,29 @@ function Contact() {
 
   const submitHandler = async (event) => {
     event.preventDefault();
+    // try {
+    //   const payLoad = {
+    //     name: formdata.name,
+    //     email: formdata.email,
+    //     subject: formdata.subject,
+    //     message: formdata.message,
+    //   };
+    //   await axios({
+    //     method: "post",
+    //     url: "http://localhost:8080/api/",
+    //     data: payLoad,
+    //   })
+    //     .then(() => {
+    //       console.log("Data successfully sent");
+    //     })
+    //     .catch((err) => {
+    //       console.log("Has been a error");
+    //       console.error(err);
+    //     });
+    // } catch (err) {
+    //   console.error(err);
+    // }
+
     try {
       const payLoad = {
         name: formdata.name,
@@ -30,33 +53,17 @@ function Contact() {
         subject: formdata.subject,
         message: formdata.message,
       };
-      await axios({
-        method: "post",
-        url: "http://localhost:8080/api/",
-        data: payLoad,
-      })
-        .then(() => {
-          console.log("Data successfully sent");
-        })
-        .catch((err) => {
-          console.log("Has been a error");
-          console.error(err);
-        });
-    } catch (err) {
-      console.error(err);
-    }
 
-    // try {
-    //   const res = await fetch("/api/save", {
-    //     method: "POST",
-    //     body: JSON.stringify(payLoad),
-    //     headers: { "Content-Type": "application/json" },
-    //   });
-    //   const data = await res.json();
-    //   console.log(data);
-    // } catch (err) {
-    //   console.log(err);
-    // }
+      const res = await fetch("/api/save", {
+        method: "POST",
+        body: JSON.stringify(payLoad),
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await res.json();
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
 
     // // Error Checking
     if (!formdata.name) {

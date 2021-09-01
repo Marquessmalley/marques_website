@@ -12,27 +12,22 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/", async (req, res) => {
-  try {
-    const data = {
-      name: req.body.name,
-      email: req.body.email,
-      subject: req.body.subject,
-      message: req.body.message,
-    };
+router.post("/save", (req, res) => {
+  const data = {
+    name: req.body.name,
+    email: req.body.email,
+    subject: req.body.subject,
+    message: req.body.message,
+  };
+  const newContact = new Contact();
 
-    const newContact = await new Contact();
-
-    newContact.collection.insertOne(data, (err, docs) => {
-      if (err) {
-        return console.error(err);
-      } else {
-        console.log("Form Saved");
-      }
-    });
-  } catch (err) {
-    conole.error(err);
-  }
+  newContact.collection.insertOne(data, (err, docs) => {
+    if (err) {
+      return console.error(err);
+    } else {
+      console.log("Form Saved");
+    }
+  });
 });
 
 module.exports = router;
