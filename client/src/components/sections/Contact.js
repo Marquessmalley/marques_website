@@ -23,57 +23,40 @@ function Contact() {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    const payLoad = {
-      name: formdata.name,
-      email: formdata.email,
-      subject: formdata.subject,
-      message: formdata.message,
-    };
-    // POST IN TERMINAL
-    // axios({
-    //   method: "post",
-    //   url: "/api/save",
-    //   data: payLoad,
-    // })
-    //   .then(() => {
-    //     console.log("Data successfully sent");
-    //   })
-    //   .catch(() => {
-    //     console.log("Has been a error");
-    //   });
     try {
-      const res = await fetch("/api/save", {
-        method: "POST",
-        body: JSON.stringify(payLoad),
-        headers: { "Content-Type": "application/json" },
-      });
-      const data = await res.json();
-      console.log(data);
+      const payLoad = {
+        name: formdata.name,
+        email: formdata.email,
+        subject: formdata.subject,
+        message: formdata.message,
+      };
+      await axios({
+        method: "post",
+        url: "http://localhost:8080/api/",
+        data: payLoad,
+      })
+        .then(() => {
+          console.log("Data successfully sent");
+        })
+        .catch((err) => {
+          console.log("Has been a error");
+          console.error(err);
+        });
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
 
-    // // POST IN BROWERS
-    // axios.post("/api/save", payLoad).then(
-    //   (response) => {
-    //     console.log(response);
-    //   },
-    //   (error) => {
-    //     console.log("has been a error", error);
-    //   }
-    // );
-
-    // axios({
-    //   method: "post",
-    //   url: "http://localhost:8080/api/save",
-    //   data: payLoad,
-    // })
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
+    // try {
+    //   const res = await fetch("/api/save", {
+    //     method: "POST",
+    //     body: JSON.stringify(payLoad),
+    //     headers: { "Content-Type": "application/json" },
     //   });
+    //   const data = await res.json();
+    //   console.log(data);
+    // } catch (err) {
+    //   console.log(err);
+    // }
 
     // // Error Checking
     if (!formdata.name) {

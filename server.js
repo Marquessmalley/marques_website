@@ -9,9 +9,9 @@ const PORT = process.env.PORT || 8080;
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
 // DATA PARSING
 app.use(express.json());
+app.use(cors({ origin: ["http://localhost:3000"], credentials: true }));
 app.use(express.urlencoded({ extended: false }));
 // app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
