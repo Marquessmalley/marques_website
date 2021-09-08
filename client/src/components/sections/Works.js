@@ -43,6 +43,13 @@ const allData = [
   },
   {
     id: 3,
+    title: "My weather app",
+    category: "website",
+    image: "images/weatherapp.png",
+    link: ["https://marques-weather-api.herokuapp.com/"],
+  },
+  {
+    id: 4,
     title: "Delivery App Wireframe",
     category: "mobile",
     image: "images/works/3.svg",
